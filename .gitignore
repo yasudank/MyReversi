@@ -1,8 +1,5 @@
 # Build
 ## Android
-/gradle
-/gradlew
-/gradlew.bat
 /build
 !*/build/classes
 /capture*
@@ -29,23 +26,16 @@
 *.war
 *.ear
 
-# Android Studio 3.x
-# gradle cache
-/gradle
-!*/build/
-
-# This is an Android-specific file, and it's not a general Java file.
-/libraries/*.jar
-
-# This file is specific to Android Studio.
-/gradle
-
-# These are files that Android Studio generates in the project root.
-/project.iml
-/*.iml
-
-# This file is specific to IntelliJ IDEA.
-/.idea
+# Gradle
+# Allow the gradle directory itself so we can un-ignore files within it
+!/gradle/
+# Ignore everything inside gradle by default
+/gradle/*
+# Un-ignore the version catalog and the wrapper
+!/gradle/libs.versions.toml
+!/gradle/wrapper/
+/gradlew
+/gradlew.bat
 
 # Log files
 *.log
@@ -64,20 +54,3 @@
 .cxx
 # Command line .json file generated for Skylark Gradle build graph in Android Studio 2.3 and 3.0
 cxx-flags.json
-
-# Android Gradle plugin generated build folder (if enabled)
-/build
-!*/build
-
-# This file is specific to Android Studio.
-/sync
-
-# Built application files
-## Java
-*.class
-*.jar
-*.war
-*.ear
-
-# Log files
-*.log
